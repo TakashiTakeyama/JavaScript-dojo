@@ -25,4 +25,31 @@
       console.log(`エラー: ${error}`);
     }
   );
+
+  /*JavaScriptはシングルスレッド、一つずつしか処理できない。
+  それを解決できるのがWeb workerでマルチスレッドにする事ができ、処理を並列にすることができる。*/
+
+  document.addEventListener('DOMcontenLoaded', function() {
+    document.getElementById('btn').addEventListener('click', function(){
+      var worker = new Worker('scripts/woker.js');
+
+      worker.postMessage({
+        //一般的にはパラメータ名: 値のhashで渡す事がおすすめ！
+        'target': document.getElementById('target').value,
+        'x': document.getElementById('x').value
+      });
+      document.getElementById('result').textContent = e.data;
+      
+      //wokerからの結果を処理するのはmessageイベントリスナーの役割、戻り値にはdateプロパティでアクセスできる！
+      worker.addEventListener('message', function(e) {
+        document.getElementById('result').textContent = e.data;
+      }, false);
+      
+      worker.addEventListener('error', function(e) {
+        //error情報は イベントオブジェクトのmessage/filename/lineno行番号プロパティなどで取得できる。
+        document.getElementById('result').textContent = e.message;
+      }, false);
+    }, false);
+  }, false);
+    
 }
