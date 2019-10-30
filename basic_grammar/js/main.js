@@ -218,13 +218,50 @@
 
   // showTime();
 
-  const a = 5;
+  // const a = 5;
 
-  try {
-    console.log(a.toUpperCase());
-  } catch (e) {
-    console.log(e.message);
-  }
+  // try {
+  //   console.log(a.toUpperCase());
+  // } catch (e) {
+  //   console.log(e.message);
+  // }
+
+  // console.log('Finish!');
+
+  // document.body.textContent = 'Hello';
+  // document.title = 'Changed!';
+
+  // document.getElementById('target');
+  // document.getElementsByClassName('box');
+  // document.getElementById('target').textContent = 'Changed!';
+  // document.querySelector('h1').textContent = 'H1';
+  // document.querySelectorAll('li:nth-child(odd)').forEach(li => {
+  //   li.textContent = 'LI!';
+  // });
+
+  // const ul = document.querySelector('ul');
+
+  // console.log(ul.parentNode);
+  // console.log(ul.children);
+  // console.log(ul.children[0]);
+
+  // for (let i = 0; i < ul.children.length; i++) {
+  //   console.log(ul.children[i].textContent);
+  // }
+
+  // const h1 = document.querySelector('h1');
+
+  // console.log(h1.title);
+  // h1.title = 'Changed'
+
+  // h1.style.color = 'gray';
+  // h1.style.backgroundColor = 'pink';
   
-  console.log('Finish!');
+//HTMLのカスタムデータ属性
+
+  // const h1 = document.querySelector('h1');
+
+  // console.log(h1.dataset.appId);
+  // h1.dataset.message = 'this is custom message!';
+
 };
