@@ -264,4 +264,81 @@
   // console.log(h1.dataset.appId);
   // h1.dataset.message = 'this is custom message!';
 
+  // const div = document.querySelector('div');
+
+  // div.className = 'box border-pink';
+  
+  // div.classList.add('border-pink');
+
+  // div.classList.remove('box');
+
+  // if (div.classList.constains('border-pink')) {
+  //   div.classList.remove('border-pink');
+  // } else {
+  //   div.classList.add('border-pink');
+  // }
+//上記と同じ内容
+  // div.classList.toggle('boder-pink');
+
+  // const h1 = document.createElement('h1');
+  // h1.textContent = 'Title';
+  // document.body.appendChild(h1);
+
+  // const p = document.createElement('p');
+  // p.textContent = 'Hello, hello, hello...';
+  // document.body.appendChild(p);
+
+  // const h2 = document.createElement('h2');
+  // h2.textContent = 'Sub Title';
+  // document.body.insertBefore(h2, p);
+
+  // // const copy = p.cloneNode(true);
+  // const copy = p.cloneNode(false);
+  // document.body.insertBefore(copy, h2);
+
+  // document.body.removeChild(h2);
+
+  // const text = document.querySelector('input[type="text"]');
+  // const textarea = document.querySelector('textarea');
+
+  // console.log(text.value);
+  // console.log(textarea.value);
+
+  // text.focus();
+  // text.select();
+  // text.disabled = true;
+
+  // console.log(document.querySelectorAll('input[type="checkbox"]')[0].checked);
+  // console.log(document.querySelectorAll('input[type="checkbox"]')[1].checked);
+
+  // document.querySelectorAll('input[type="checkbox"]')[0].checked = true;
+
+  // console.log(document.querySelectorAll('input[type="radio"]')[0].checked);
+  // console.log(document.querySelectorAll('input[type="radio"]')[1].checked);
+
+  // document.querySelectorAll('input[type="radio')[1].checked = true;
+
+  // console.log(document.querySelectorAll('select > option')[0].selected);
+  // console.log(document.querySelectorAll('select > option')[1].selected);
+  // console.log(document.querySelectorAll('select > option')[2].selected);
+
+
+  // document.querySelectorAll('select > option')[2].selected = true;
+
+  // const div = document.querySelector('div');
+
+  // document.addEventListener('mousemove', e => {
+  //   div.textContent = `${e.clientX}:${e.clientY}`
+  // });
+
+  const a = document.querySelector('a');
+  const span = document.querySelector('span');
+
+  a.addEventListener('click', e => {
+    //要素の既定の動作をキャンセルする。 preventDefault();
+    e.preventDefault();
+    a.classList.add('hidden');
+    span.classList.remove('hidden');
+  })
+
 };
