@@ -323,13 +323,13 @@
   // console.log(document.querySelectorAll('select > option')[2].selected);
 
 
-  // document.querySelectorAll('select > option')[2].selected = true;
+  document.querySelectorAll('select > option')[2].selected = true;
 
-  // const div = document.querySelector('div');
+  const div = document.querySelector('div');
 
-  // document.addEventListener('mousemove', e => {
-  //   div.textContent = `${e.clientX}:${e.clientY}`
-  // });
+  document.addEventListener('mousemove', e => {
+    div.textContent = `${e.clientX}:${e.clientY}`
+  });
 
   const a = document.querySelector('a');
   const span = document.querySelector('span');
