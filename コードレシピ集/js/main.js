@@ -153,26 +153,196 @@
 
 // if (randomNum >= 5) alert('randomNumは5以上');
 
-const myFruit = 'みかん';
+// const myFruit = 'みかん';
 
-switch (myFruit) {
-  case 'りんご':
-    alert('りんごです');
-    break;
-  case 'みかん':
-    alert('みかんです');
-    break;
-  default:
-    alert('その他です')
-    break;
-}
+// switch (myFruit) {
+//   case 'りんご':
+//     alert('りんごです');
+//     break;
+//   case 'みかん':
+//     alert('みかんです');
+//     break;
+//   default:
+//     alert('その他です')
+//     break;
+// }
 
+// const myFruit = 'りんご';
 
+// switch (myFuruit) {
+//   case 'りんご':
+//   case 'みかん':
+//     alert('りんごかみかんです。');
+//     break;
+// }
 
+// for (let index = 0; index < 10; index++) {
+//   console.log('index');
+// }
 
+// let myNumber = 0;
 
+// while (myNumber < 10) {
+//   console.log(myNumber);
+//   myNumber += 1;
+// }
 
+// for (let index = 0; index < 10; index++ ) {
+//   if  (index % 2 === 0) {
+//     continue;
+//   }
 
+//   console.log(index);
+// }
 
+// console.log('ループ終了');
 
+// function myFunction(flgA) {
+//   for ( let index = 0; index < 10; index++) {
+//     if (flgA === true) {
+//       if (index % 2 !== 0) {
+//         console.log(index);
+//       }
+//     }
+//   }
 
+// }
+
+// function myFunction(flgA) {
+//   for (let index = 0; index < 10; index++) {
+//     if (flgA === false) {
+//       continue;
+//     }
+//     if (index % 2 === 0) {
+//       continue;
+//     }
+//     console.log(index);
+//   }
+// }
+
+// const isIOs = navigator.userAgent.includes('iphone');
+
+// if (isIOs) {
+
+// }
+
+// const userName = '鈴木';
+// if (userName) {
+//   alert(`こんにちは${userName}さん`);
+// }
+
+// const address = '';
+// if (address) {
+//   alert(`あなたは${userName}に住んでいますね?`);
+// }
+
+// const flg = 'JavaScript'.includes('a');
+// console.log(!flg);
+
+// //！を二回付与する事で、データをBoolean型に変換させる
+// console.log(!!'鈴木');
+
+// //四捨五入する
+// Math.round(数値);
+
+// document.querySelector('.result1').innerHTML = Math.round(6.24);
+// document.querySelector('.result1').innerHTML = Math.ceil(6.24);
+// document.querySelector('.result1').innerHTML = Math.floor(6.24);
+// document.querySelector('.result1').innerHTML = Math.trunc(6.24);
+// document.querySelector('.result1').innerHTML = Math.round(6.24);
+
+// Math.random();
+// Math.floor(Math.random() * 100);
+
+// 10 + Math.floor(Math.random() * 10)
+
+// const rectangle = document.querySelector('.rectangle');
+// document.querySelector('.button').addEventListener('click', onClickButton);
+
+// function onClickButton() {
+//   //Math.trunc 整数部分を返す
+//   const randomHue = Math.trunc(Math.random() * 360);
+
+//   const randomColorStart = `hsl(${randomHue}, 100%, 50%)`;
+
+//   const randomColorEnd = `hsl(${randomHue + 40}, 100%, 50%)`;
+
+//   rectangle.style.setProperty('--start', randomColorStart);
+
+//   rectangle.style.setProperty('--end', randomColorEnd);
+
+// }
+
+// const randomArray1 = crypto.getRandomValues(new Unit16Array(10));
+// randomArray1.join('');
+// crypto.getRandomValues(new Uint32Array(10)).join('');
+
+// Math.abs(-10);
+// Math.pow(2, 10);
+// Math.sign(2);
+// Math.sign(-2);
+// Math.sqrt(16);
+// Math.log(Math.E);
+
+// let degree = 0;
+// const rotation = (degree * Math.PI) / 180;
+
+// const targetX  = 100 * Math.cos(rotation);
+// const targetY  = 100 * Math.sin(rotation);
+
+//Math.PI　円周率
+// const character = document.querySelector('.character');
+
+// let degree = 0;
+
+// loop();
+
+// function loop() {
+//   const rotation = (degree * Math.PI) / 180;
+
+//   const targetX = window.innerWidth / 2 + 100 * Math.cos(rotation) - 50;
+//   const targetY = window.innerHeight / 2 + 100 * Math.sin(rotation) - 50;
+
+//   character.style.left = `${targetX}px`;
+//   character.style.top = `${targetY}px`;
+//   degree += 1;
+//   requestAnimationFrame(loop);
+
+// }
+
+// let textarea = document.querySelector('.textarea');
+// let string_num = document.querySelector('.string_num');
+
+// textarea.addEventListener('keyup', onKeUp);
+
+// function onKeyUp() {
+//   const inputText = textarea.value;
+//   string_num.innerText = inputText.length;
+
+// }
+
+// const targetString1 = 'こんにちは';
+// const trimmedStirng1 = targetString1.trim();
+// console.log(trimmedString1);
+
+// const myString = 'JavaScriptを覚えよう';
+// const c1 = myString.indexOf('JavaScript', 4);
+// console.log(c1);
+
+// const myString = 'JavaScriptを覚えよう';
+// const s1 = myString.search(/JavaScript/);
+// console.log(s1);
+
+// const s2 = myString.search(/HTML/);
+// console.log(s2);
+
+const myString = 'JavaScriptを覚えよう';
+
+const a1 = 'JavaScriptを覚えよう'.includes('JavaScript');
+console.log(a1);
+
+const s2 = 'JavaScriptを覚えよう'.startsWith('覚えよう');
+console.log(s2);
+
+const a3 = 'JavaScriptを覚えよう'.endWith('覚えよう');
+console.log(a3);
