@@ -524,14 +524,280 @@
 // let en = encodeURI('http://example.com/可愛い猫のページ.html');
 // console.log(en);
 
-document.querySelector('#tweetButton').addEventListener('click', () => {
-  let tweetText = document.querySelector('#tweetTextArea').value;
+// document.querySelector('#tweetButton').addEventListener('click', () => {
+//   let tweetText = document.querySelector('#tweetTextArea').value;
 
-  tweetText += ' #JavaScript';
+//   tweetText += ' #JavaScript';
 
-  const encodeText = encodeURIComponent(tweetText);
+//   const encodeText = encodeURIComponent(tweetText);
 
-  const tweetURL = `https://twitter.com/intent/tweet? text=${encodeText}`;
+//   const tweetURL = `https://twitter.com/intent/tweet?text=${encodeText}`;
   
-  window.open(tweetURL);
-});
+//   window.open(tweetURL);
+// });
+
+// const array1 = [];
+
+// const array6 = [{ id: 1, name: 'takashi'}, { id: 2, name: 'ootu'}];
+
+// console.log(array6);
+
+// const array = ['イチゴ', 'みかん', 'りんご'];
+
+// array.forEach((value, index) => {
+//   console.log(index, value);
+// })
+
+// [1,2,3,4,5,6,7,8]
+
+// .fliter((value) => value % 2 === 0)
+
+// .forEach((value) => {
+//   console.log(value);
+// });
+
+// const userList = [
+//   { id: 1, name: '田中', address: '東京' },
+//   { id: 2, name: '鈴木', address: '宮城' },
+//   { id: 3, name: '高橋', address: '福岡' }
+// ];
+
+// const container = document.querySelector('.container');
+
+// userList.forEach((userData) => {
+//   container.innerHTML += `
+//   <div class="card">
+//   <h2>${userData.name}</h2>
+//   <p>出身地：${userData.address}</p>
+//   </div>
+//   `;
+// });
+
+// const array1 = ['りんご', 'みかん'];
+// array1.unshift('バナナ');
+// console.log(array1);
+
+// const array2 = ['りんご', 'みかん'];
+// array2.push('バナナ', 'イチゴ');
+
+// console.log(array2);
+
+// const array1 = ['鈴木', '佐藤'];
+// const array2 = ['田中'];
+// const array3 = array1.concat(array2);
+
+// console.log(array3);
+//スプレッド演算子(...)を用いると、[...配列]のように指定する事で、配列の要素すべて展開した配列が得られる
+
+// const myArray = ['鈴木', '田中', '高橋', '後藤'];
+// const targetUser = myArray.find((element) => element === '田中');
+//田中の要素を取得
+// console.log(targetUser);
+
+// const userDateList = [
+//   { id: 123, name: '高橋' },
+//   { id: 1021, name: '鈴木' },
+//   { id: 6021, name: '後藤' }
+// ];
+
+// const searchIdInput = document.querySelector('#search-id-input');
+// const searchResult = document.querySelector('#search-result');
+
+// searchIdInput.addEventListener('keyup', () => {
+//   const searchId = Number(event.target.value);
+//   findUser(searchId);
+// });
+
+// function findUser(searchId) {
+//   const targetData = userDateList.find((data) => data.id === searchId);
+
+//   if (targetData == null) {
+//     searchResult.textContent = '該当者なし';
+//     return;
+//   }
+
+//   searchResult.textContent = targetData.name;
+// }
+
+// const array = [
+//   '鈴木', '田中', '高橋', '後藤'
+// ];
+
+// const targetIndex = array.findIndex((element) => element === '田中');
+// console.log(targetIndex);
+
+// const array = [1, 2, 3, 4, 5];
+// array.sort((a,b) => {
+//   if (a < b) {
+//     return 1;
+//   }
+
+//   if (a === b) {
+//     return 0;
+//   }
+
+//   if (a > b) {
+//     return -1;
+//   }
+// })
+
+// console.log(array);
+
+// const userDataList = [
+//   { id: 2, name: '鈴木' },
+//   { id: 10, name: '田中' },
+//   { id: 4, name: '佐藤' },
+//   { id: 29, name: '高橋' },
+//   { id: 101, name: '小笠原' },
+// ];
+
+// function updateList() {
+//   let listHtml = '';
+
+//   for (const data of userDataList) {
+//     listHtml += `<li>${data.id} : ${data.name}</li>`;
+//   }
+
+//   document.querySelector('.user_list').innerHTML = listHtml;
+// }
+
+// function sortByAscending() {
+//   userDataList.sort((a, b) => {
+//     return a.id - b.id;
+//   });
+//   updateList();
+// };
+
+// function sortByDescending() {
+//   userDataList.sort((a, b) => {
+//     return b.id - a.id;
+//   });
+//   updateList();
+// }
+
+// document.querySelector('.ascending').addEventListener('click', (event) => {
+//   sortByAscending();
+// });
+
+// document.querySelector('.descending').addEventListener('click', () => {
+//   sortByDescending();
+// });
+
+// const arr1 = ['grape', 'Orange', 'apple'];
+// arr1.sort();
+// console.log(arr1);
+
+// const arr2 = ['grape', 'Orange', 'apple'];
+// arr2.sort((a, b) => a.localeCompare(b));
+// console.log(arr2);
+
+// const idList = [4, 10, 20];
+// const userIdList = idList.map((value) =>
+//   `userid_${value}`);
+// console.log(userIdList);
+
+// const idList = [3, 8, 12];
+// const userIdList = idList.map((value, index) =>
+// `userid_${index + 1}_${value}`);
+// console.log(userIdList);
+
+// const apiResponseData = [
+//   { id: 10, name: '鈴木'},
+//   { id: 21, name: '田中'},
+//   { id: 31, name: '高橋'}
+// ];
+
+// const idList = apiResponseData.map((value) =>
+// value.id);
+
+// console.log(idList);
+
+// const array = [10, 20, 30, 40];
+// const newArray = [10, 20, 30, 40].fliter((value) => value >= 30);
+
+// console.log(newArray);
+
+// const userDataList = [
+//   { name: '鈴木', age: 18 },
+//   { name: '田中', age: 27 },
+//   { name: '佐藤', age: 32 },
+//   { name: '高橋', age: 41 },
+//   { name: '小笠原', age: 56 },
+// ];
+
+// document.querySelectorAll('.button').forEach((element) => {
+//   element.addEventListener('click', (event) => {
+//     onClickButton(event);
+//   })
+// })
+
+// function onClickButton(event) {
+//   //targetイベントを発生させたオブジェクトへの参照
+//   const button = event.target;
+//   const targetAge = button.dataset.age;
+//   const filterdList = userDataList.filter((data) => data.age >= targetAge);
+//   updateList(filterdList);
+// }
+
+// function updateList(filterdList) {
+//   let listHtml = '';
+
+//   for (const data of filterdList) {
+//     listHtml += `<li>${data.name} : ${data.age}歳</li>`
+//   }
+
+//   document.querySelector(`.user_list`).innerHTML = listHtml;
+//  }
+
+// const priceList = [100, 500, 900];
+// const sum = priceList.reduce((previous, current) => {
+//   return previous + current;
+// });
+
+// console.log(sum);
+
+// const array = [['バナナ', 'りんご', 'いちご'], ['みかん', 'ぶどう']];
+// const flattenedArray = array.reduce((previousValue, currentValue) => {
+//   return previousValue.concat(currentValue);
+// });
+// console.log(flattenedArray);
+
+// const array = ['鈴木', '田中', '後藤'];
+// const members1 = array.reduce((previous, current) => {
+//   return `${previous}と${current}`;
+// });
+// console.log(members1);
+// const members2 = array.reduceRight((previous, current) => {
+//   return `${previous}と${current}`;
+// });
+// console.log(members2);
+
+// const allDivElementList = document.querySelectorAll('div');
+// console.log(allDivElementList.length);
+// console.log(allDivElementList[2]);
+
+// const allDivElementList = document.querySelectorAll('div');
+// const elementsArray = [...allDivElementList];
+
+// elementsArray.filter((element) => element.classList.contains('on'));
+
+// console.log([...myString]);
+
+// const myString = 'こんにちは';
+// const newArray = Array.from(myString, (character) =>
+//   `${character}!`
+// );
+// console.log(newArray);
+// const anoterArray = [...myString].map((character) => `${character}！`);
+// console.log(anoterArray);
+
+// const array = ['鈴木', '田中'];
+// [array[0], array[1]] = [array[1], array[0]];
+// console.log(array);
+
+const array = [1, 2, 3, 4, 5];
+const arrayLength = array.length;
+
+for (let i = arrayLength - 1; i >= 0; i--) {
+  const randomIndex = Math.floor(Math.random() * (i + 1));
+}
