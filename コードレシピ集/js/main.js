@@ -336,13 +336,202 @@
 // const s2 = myString.search(/HTML/);
 // console.log(s2);
 
-const myString = 'JavaScriptを覚えよう';
+// const myString = 'JavaScriptを覚えよう';
 
-const a1 = 'JavaScriptを覚えよう'.includes('JavaScript');
-console.log(a1);
+// const a1 = 'JavaScriptを覚えよう'.includes('JavaScript');
+// console.log(a1);
 
-const s2 = 'JavaScriptを覚えよう'.startsWith('覚えよう');
-console.log(s2);
+// const s2 = 'JavaScriptを覚えよう'.startsWith('覚えよう');
+// console.log(s2);
 
-const a3 = 'JavaScriptを覚えよう'.endWith('覚えよう');
-console.log(a3);
+// const a3 = 'JavaScriptを覚えよう'.endWith('覚えよう');
+// console.log(a3);
+
+// const searchWordText = document.querySelectorAll('#prefecture-list button');
+
+// searchWordText.addEventListener('keup', () => {
+//   const serchWord = searchWordText.values;
+
+//   prefectureList.forEach((element) => {
+//     if (searchWord || searchWord === '') {
+//       element.classList.remove('hide');
+//       return;
+//     }
+
+//     const prefectureName = element.dataset.name;
+
+//     const phonetic = element.dataset.phonetic;
+
+//     if (
+//       searchWord.charAt(0) === 
+//       prefectureName.charAt(0) ||
+//       searchWord.charAt(0) === phonetic.charAt(0)
+//     ) {
+//       element.classList.remove('hide');
+//     } else {
+//       element.classList.add('hide');
+//     }
+//   })
+// })
+
+// const imageName = 'image1,png';
+// imageName.replace('1.png', '2.png');
+
+// const inputText = '鈴木\n一郎';
+// inputText.replace('\n', '');
+
+// let phoneNumber = '090-1234-5678';
+// let num = phoneNumber.replace(/-/g, '');
+// console.log(num);
+
+// document.querySelector('#submitButton').addEventListener('click', (event) => {
+//   const phoneNumber = document.querySelector('#phoneNumberText').value;
+
+//   const trimmedPhoneNumber = phoneNumber.replace(/-/g,'');
+//   alert(`電話番号は${trimmedPhoneNumber}です。`)
+//   event.preventDefault();
+// })
+
+// const myUrl = 'http://example.com/?id=123456&name=Suzuki&age=28';
+// // myUrl.split('&');
+
+
+// myUrl.split(/&|\?/);
+// console.log(myUrl);
+
+// const hashes = {};
+
+// const parameters = location.search.split(/&|\?/).filter((value) => {
+//   return value.includes('=');
+// });
+
+// parameters.forEach((parameter) => {
+//   const parmeterList = parameter.split('=');
+//   const key = parameterList[0];
+//   const value = decodeURIComponent(parameterList[1]);
+
+//   hashes[key] = value;
+// });
+
+// if (hashes['id'] != null) {
+//   document.querySelector('.id').innerHTML = hashes['id'];
+// }
+
+// const country = 'アメリカ';
+// const status = '合衆国';
+// console.log(country + status);
+// console.log(`${country}${status}`);
+
+// const familyNameText = document.querySelector('#familyNameText');
+// const firstNameText = document.querySelector('#firstNameText');
+// const fullname = document.querySelector('#fullName');
+
+// firstNameText.addEventListener('keyup', onKeyUp);
+// familyNameText.addEventListener('keyup', onKeyUp);
+
+// function onKeyUp () {
+//   const familyName = familyNameText.value;
+//   const firstName = firstNameText.value;
+//   fullname.innerHTML = `${familyName}${firstName}`;
+// }
+
+// const nameInput = document.querySelector('.name-input');
+// const warningMessage = document.querySelector('.warning-message');
+
+// nameInput.addEventListener('input', () => {
+// const inputStr = nameInput.value;
+// const normalStr = inputStr.toLowerCase();
+
+// if (normalStr.includes('test') === true) {
+//   warningMessage.textContent = '「test」が含まれてます'
+// } else {
+//   warningMessage.textContent = '';
+// }
+// });
+
+// const userName = '鈴木';
+// const tag = `<div class="container">こんにちは${userName}さん</div>`;
+// console.log(tag);
+
+// const str2 = `123 * 123は${123 * 123}です。`;
+// console.log(str2);
+
+// const today = new Date();
+// document.querySelector('#main').innerHTML = `
+// <h1>今日${today.getMonth() + 1}/${today.getDate()}の天気</h1>
+// <p>東京は、晴れでしょう</p>
+// `;
+
+// if (/iPhone | iPod | iPad/.test(navigator.userAgent)) {
+//   alert('アクセスしているブラウザーはios端末です');
+// }
+
+// // JがJavaScriptに含まれているかどうか
+// /J/.test('JavaScript');
+
+// const phoneNumberText = document.querySelector('#phoneNumberText');
+// const warningMessage = document.querySelector('#warningMessage');
+
+// phoneNumberText.addEventListener('keyup', () => {
+//   const phoneNumber = phoneNumberText.value;
+//   const tirmmedPhoneNumber = phoneNumber.replace(/-/g, '');
+
+//   if (/^[0][0-9]{9,10}$/.test(tirmmedPhoneNumber) === false) {
+//     warningMessage.innerText = '電話番号を正しく入力してください';
+//   } else {
+//     warningMessage.innerText = '';
+//   }
+// });
+
+// const secondElement = document.querySelector('.second');
+// const goalTime = new Date().getTime() + 15 * 1000;
+// update();
+
+// function update() {
+//   const currentTime = new Date().getTime();
+//   const leftTime = goalTime - currentTime;
+  
+//   secondElement.innerText = (leftTime / 1000).toFixed(2);
+//   if (secondElement.innerText === 0.00) {
+//     secondElement.innerText = 0;
+//   }
+//   requestAnimationFrame(update);
+// }
+
+// const hourElement = document.querySelector('.hour');
+// const minuteElement = document.querySelector('.minute');
+// const secondElement = document.querySelector('.second');
+
+// update();
+
+// function update() {
+//   const currentTime = new Date();
+
+//   const second = currentTime.getSeconds();
+//   secondElement.innerText = addZeroPadding(second);
+//   requestAnimationFrame(update);
+// }
+
+// /*
+// @param Number
+// @returns {string}
+// */
+
+// function addZeroPadding(num) {
+//   return String(num).padStart(2, 0);
+// }
+
+// let en = encodeURI('http://example.com/可愛い猫のページ.html');
+// console.log(en);
+
+document.querySelector('#tweetButton').addEventListener('click', () => {
+  let tweetText = document.querySelector('#tweetTextArea').value;
+
+  tweetText += ' #JavaScript';
+
+  const encodeText = encodeURIComponent(tweetText);
+
+  const tweetURL = `https://twitter.com/intent/tweet? text=${encodeText}`;
+  
+  window.open(tweetURL);
+});
