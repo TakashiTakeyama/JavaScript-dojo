@@ -795,9 +795,300 @@
 // [array[0], array[1]] = [array[1], array[0]];
 // console.log(array);
 
-const array = [1, 2, 3, 4, 5];
-const arrayLength = array.length;
+// const array = [1, 2, 3, 4, 5];
+// const arrayLength = array.length;
 
-for (let i = arrayLength - 1; i >= 0; i--) {
-  const randomIndex = Math.floor(Math.random() * (i + 1));
+// for (let i = arrayLength - 1; i >= 0; i--) {
+//   const randomIndex = Math.floor(Math.random() * (i + 1));
+//   [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
+// }
+// console.log(array);
+
+// const array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const shuffled1 = shuffleArray(array1);
+// console.log(shuffled1);
+
+// const array2 = ['田中', '鈴木', '吉田', '後藤', '辻'];
+// const shuffled2 = shuffleArray(array2);
+// console.log(shuffled2);
+
+// function shuffleArray(sourceArr) {
+//   const array = sourceArr.concat();
+//   const arrayLength = array.length;
+
+//   for (let i = arrayLength - 1; i >= 0; i--) {
+//     const randomIndex = Math.floor(Math.random() * (i + 1));
+//     [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
+//   }
+//   return array;
+// }
+
+// const person = {
+//   id: 1,
+//   name: '鈴木',
+//   age: 28
+// };
+
+// const object = {
+//   list: [1, 2, 3],
+//   subObject: { id: 1, name: '鈴木' },
+//   method: () => {
+//     console.log('メソッドを実行');
+//   }
+// };
+
+// const person = {
+//   id: 1,
+//   name: '鈴木',
+//   age: 28
+// };
+
+// console.log(person);
+
+// const object = {};
+// const person = {
+//   id: 1,
+//   name: '鈴木',
+//   age: 28
+// };
+
+// console.log(person.id);
+// console.log(person['name']);
+
+// person.id = 2;
+// person['name'] = '田中';
+// console.log(person.id);
+// console.log(person['name']);
+
+// const object2 = {};
+// object2.foo;
+
+// const responce = {
+//   result: true,
+//   list: [{ id: 1, name: '田中', age: 26 }, { id: 2, name: '鈴木', age: 32 }]
+// };
+
+// console.log(responce.list[0].name);
+// responce.list[1].age = 51;
+// console.log(responce.list[1].age);
+
+// const myClass = {
+//   method1: function() {
+//     console.log('メソッド１を実行');
+//   },
+//   method2: () => {
+//     console.log('メソッド２を実行');
+//   }
+// };
+
+// myClass.method2();
+
+// const object1 = {
+//   result: true,
+//   members: [
+//     { id: 1, name: '鈴木' },
+//     { id: 2, name: '田中' },
+//     { id: 3, name: '高橋' },
+//   ]
+// };
+
+// const conpiedObject2 = Object.assign({}, object1);
+// console.log(conpiedObject2);
+
+// const object3 = {
+//   id: 1, 
+//   members: ['鈴木', '田中', '高橋']
+// };
+
+// const copiedObject3 = { ...object3 };
+// object3.members[0] = 'John';
+// console.log(copiedObject3);
+// console.log(copiedObject3.members[0]);
+
+// const userData = {
+//   id: 1,
+//   name: '田中',
+//   age: 26
+// };
+
+// console.log(userData.hasOwnProperty('id'));
+// console.log(userData.hasOwnProperty('address'));
+// console.log('id' in userData);
+// console.log(userData.id != null);
+// console.log(userData.adress != null);
+// console.log(userData['id'] != null);
+
+// const userData = {
+//   id: 1,
+//   name: '田中',
+//   age: 26
+// };
+
+// console.log(Object.values(userData));
+// console.log(Object.entries(userData));
+
+// const userData1 = {
+//   id: 1,
+//   name: '田中',
+//   age: 26
+// };
+
+// const { id, name, age } = userData1; 
+
+// const userData3 = {
+//   id: 1,
+//   name: '田中'
+// };
+
+// const { name: myName } = userData3;
+// console.log(myName);
+
+// const object1 = { id: 10, name: '田中' };
+// object1.id = 12;
+// object1.address = '東京';
+// console.log(object1);
+
+// 'use strict';
+
+// const object2 = { id: 10, name: '田中'};
+// Object.freeze(object2);
+
+// object2.id = 12;s
+// object2.address = '東京';
+// console.log(Object.isFrozen(object2));
+
+// const num = 100;
+// const str = '鈴木';
+// const arr = [1, 2, 3];
+// const obj = {
+//   age: 18,
+//   name: '鈴木'
+// };
+// const arr = [
+//   { id: 10, name: '鈴木' },
+//   { id: 20, name: '田中' },
+//   { id: 30, name: '田中' }
+// ]
+
+// const myArray = [1, 2, 3];
+// myArray[0] = 100;
+// console.log(myArray);
+
+// let myNumber = 10;
+
+// console.log()
+//   typeof function() {
+//     console.group('test');
+// };
+// console.log(typeof class MyClass {});
+
+// const today = new Data();
+// console.log(today instanceof Date);
+// console.log(today instanceof Array);
+
+// function showCurrentDate(argument) {
+//   if (argument instanceof Date) {
+//     console.log(`現在は${argument.toLocaleDateString()}です。`);
+//   } else {
+//     console.log('不正なデータです')
+//   }
+// }
+
+// const today = new Date();
+// const myArray = [1, 2, 3];
+// showCurrentDate(today);
+// showCurrentDate(myArray);
+
+// class MyClass1 {}
+// class MyClass2 {}
+
+// const myInstance1 = new MyClass1();
+// const myInstance2 = new MyClass2();
+
+// console.log(myInstance1 instanceof MyClass1);
+// console.log(myInstance2 instanceof MyClass1); 
+
+// let a = 100;
+// let b = a;
+// a = 500;
+// console.log(b);
+// console.log(a);
+
+// function myFunction(x) {
+//   x = x + 2;
+//   return x;
+// }
+
+// let a = 10;
+
+// myFunction(a);
+// console.log(a);
+
+// function myFunction(x) {
+//   x[0] = 100;
+// }
+
+// let a = [1, 2, 3];
+// myFunction(a);
+// console.log(a);
+
+// const result = 100 + Number('200');
+// console.log(result);
+// console.log(typeof(String(1)));
+
+// let b = 10;
+// b = '鈴木';
+// console.log(b);
+// const myInstance1 = new MyClass1();
+
+// let a;
+// console.log(a);
+
+// const object = {};
+// console.log(object.b);
+
+// function myFunction(c) {
+//   console.log(`bの値は${c}`);
+// }
+
+// myFunction();
+
+// function searchUser(targetId) {
+//   const userList = [
+//     { id: 1, name: '鈴木' },
+//     { id: 2, name: '田中' },
+//     { id: 3, name: '太郎' },
+//   ];
+
+//   const targetUser = userList.find((user) => user.id === targetId );
+//   if (targetUser === undefined) {
+//     return null;
+//   }
+//   return targetUser.name;
+// }
+
+// console.log(searchUser(1));
+// console.log(searchUser(4));
+// // searchuser(4);
+
+// const date = new Date();
+// const year = date.getFullYear();
+// const month = date.getMonth() + 1;
+// const label = `${month}月${day}日`
+
+// document.querySelector('#log').innerHTML = `今年は西暦${year}年です。`
+
+const date = new Date();
+const hour = date.getHours();
+let meridiem;
+let hour2;
+if (hour < 12) {
+  meridiem = '午前';
+  hour2 = hour;
+} else {
+  meridiem = '午後';
+  hour2 = hour - 12;
 }
+
+const label = `${meridiem}${hour2}時`;
+document.querySelector('#log').innerHTML = `現時刻は${label}です`;
