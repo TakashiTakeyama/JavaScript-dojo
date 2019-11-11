@@ -1078,17 +1078,136 @@
 
 // document.querySelector('#log').innerHTML = `今年は西暦${year}年です。`
 
-const date = new Date();
-const hour = date.getHours();
-let meridiem;
-let hour2;
-if (hour < 12) {
-  meridiem = '午前';
-  hour2 = hour;
-} else {
-  meridiem = '午後';
-  hour2 = hour - 12;
-}
+// const date = new Date();
+// const hour = date.getHours();
+// let meridiem;
+// let hour2;
+// if (hour < 12) {
+//   meridiem = '午前';
+//   hour2 = hour;
+// } else {
+//   meridiem = '午後';
+//   hour2 = hour - 12;
+// }
 
-const label = `${meridiem}${hour2}時`;
-document.querySelector('#log').innerHTML = `現時刻は${label}です`;
+// const label = `${meridiem}${hour2}時`;
+// document.querySelector('#log').innerHTML = `現時刻は${label}です`;
+
+// const date = new Date();
+// const day = date.getDay();
+// const dayList = ['日', '月', '火', '水', '木', '金', '土'];
+// const label = dayList[day];
+// const locale = date.toLocaleString();
+// const localeDate = date.toLocaleDateString();
+// const localTime = date.toLocaleTimeString();
+
+// document.querySelector('#log').innerHTML = `今日は${label}曜日です`
+// document.querySelector('#log').innerHTML = `${locale}<br />
+// ${localeDate}<br />
+// ${localTime}`;
+
+// const num1 = Date.parse('2018/06/20');
+// console.log(num1);
+
+// const num2 = Date.parse(2018, 5, 20);
+// console
+// .log(num2);
+// const num = new Date();
+// console.log(num.getDay());
+
+// const date1 = new Date('2018/06/12 20:01:10');
+// const date2 = new Date('Tue Jun 12 2018 20:01:10');
+// const date3 = new Date('2018, 5, 12, 20, 1, 10');
+// const date4 = new Date(1528801270000);
+// console.log(date1);
+// console.log(date2);
+// console.log(date3);
+// console.log(date4);
+
+// const date = new Date('2018/06/01');
+// date.setMonth(date.getMonth() - new Date);
+// console.log(date.toLocaleDateString());
+
+// const dateA = new Date('2018/06/01');
+// const dateB = new Date('2018/05/01');
+// const diffMSec = dateA.getTime() - dateB.getTime();
+// console.log(diffMSec);
+// const diffDate = diffMSec / (24 * 60 * 60 * 1000);
+// const diffHour = diffMSec / (60 * 60 * 1000);
+// const diffMin = diffMSec / (60 * 1000);
+// console.log(`${diffDate}日の差があります。`)
+// console.log(`${diffHour}時間の差があります。`)
+// console.log(`${diffMin}分の差があります。`)
+
+// const sec = Math.floor(diff / 1000);
+// console.log(sec);
+
+// const oldTime = Date.now();
+// setInterval(() => {
+//   const currentTime = Date.now();
+//   const diff = currentTime - oldTime;
+//   const sec = Math.floor(diff / 1000);
+//   document.querySelector('#log').innerHTML = `${sec}秒経過`;
+// }, 1000);
+
+// const totalTime = 10000;
+// const oldTime = Date.now();
+// const timerId = setInterval(() => {
+//   const currentTime = Date.now();
+//   const diff = currentTime - oldTime;
+//   const remainMSec = totalTime - diff;
+//   const remainSec = Math.ceil(remainMSec / 1000);
+//   let label = `残り${remainSec}秒`;
+
+//   if (remainSec <= 0) {
+//     clearInterval(timerId);
+//     label = '終了';
+//   }
+//   document.querySelector('#log').innerHTML = label;
+// })
+
+// setInterval(() => {
+//   const now = new Date();
+//   const h = now.getHours();
+//   const m = now.getMinutes();
+//   const s = now.getSeconds();
+
+//   const degH = h * (360 / 12) + m * (360 / 12/ 60);
+//   const degM = m * (360 / 60); 
+//   const degS = s * (360 / 60);
+
+//   const elementH = document.querySelector('.lineHour');
+//   const elementM = document.querySelector('.lineMin');
+//   const elementS = document.querySelector('.lineSec');
+
+//   elementH.style.transform = `rotate(${degH}deg)`;
+//   elementM.style.transform = `rotate(${degM}deg)`;
+//   elementS.style.transform = `rotate(${degS}deg)`;
+// }, 50);
+
+setInterval(() => {
+  // 現在時間を取得
+  const now = new Date();
+
+  // 時間の数値を取得
+  const h = now.getHours(); // 時間(0〜23)
+  const m = now.getMinutes(); // 分(0〜59)
+  const s = now.getSeconds(); // 秒(0〜59)
+
+  // 針の角度に反映する
+
+  // 短針 (短針は時間だけでなく分も角度に考慮する)
+  const degH = h * (360 / 12) + m * (360 / 12 / 60);
+  // 分針
+  const degM = m * (360 / 60);
+  // 秒針
+  const degS = s * (360 / 60);
+
+  const elementH = document.querySelector('.lineHour');
+  const elementM = document.querySelector('.lineMin');
+  const elementS = document.querySelector('.lineSec');
+
+  elementH.style.transform = `rotate(${degH}deg)`;
+  elementM.style.transform = `rotate(${degM}deg)`;
+  elementS.style.transform = `rotate(${degS}deg)`;
+}, 50);
