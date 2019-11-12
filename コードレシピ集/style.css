@@ -7,3 +7,7 @@
 
 }
 
+.scrollable-element {
+  overflow-y: scroll;
+}
+
