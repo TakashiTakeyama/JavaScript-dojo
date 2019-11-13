@@ -479,8 +479,126 @@
 //   console.log('dragleaveイベント');
 // });
 
-const myBox = document.querySelector('.box');
-myBox.innerHTML = 'こんにちは';
+// const myBox = document.querySelector('.box');
+// myBox.innerHTML = 'こんにちは';
 
-document.querySelector('#foo');
-document.querySelector('.list .item:nth-child(2)');
+// document.querySelector('#foo');
+// document.querySelector('.list .item:nth-child(2)');
+// const element = document.getElementById('foo');
+// const nodeList = document.querySelectorAll('.box');
+// nodeList.forEach((targetBox) => {
+//   console.log(boxList[index]);
+// });
+
+// const boxList = document.querySelectorAll('.box');
+// const boxLength = boxList.length;
+
+// for (let index = 0; index < boxLength; index++) {
+//   console.log(boxList[index]);
+// }
+
+// document.querySelectorAll('.box').forEach((targetBox) => {
+//   targetBox.addEventListener('click', () => {
+//     alert(`${targetBox.textContent}がクリックされました`);
+//   });
+// });
+
+// document.getElementsByClassName('box');
+// const boxList = dcument.getElementByClassName('box');
+// const boxLength = boxList.length;
+
+// for (let index = 0; i < boxLength; i++) {
+//   console.log(boxList[index]);
+// }
+
+// const scriptElement = document.createElement('script');
+// scriptElement.src = 'script/new-script.js';
+// document.head.appendChild(scriptElement);
+
+// console.dir(document.body);
+
+// const parentElement = document.querySelector('#parent');
+// console.log(parentElement.children);
+// const firstElementChild = parentElement.firstElementChild;
+// console.log(firstElementChild);
+// console.log(firstElementChild.nextElementSibling);
+// console.log(firstElementChild.parentNode);
+
+// const container = document.querySelector('.container');
+// const myBox = document.querySelector('#myBox');
+
+// setTimeout(() => {
+//   container.appendChild(mybox);
+// }, 3000);
+
+// const container = documentquerySelector('.container');
+// const myBox1 = document.querySelector('#myBox1');
+// const myBox1 = document.querySelector('#myBox2');
+// const box2 = document.querySelector('#box2');
+
+// setTimeout(() => {
+//   container.insertBefore(myBox1, container.firstElementChild);
+// }, 3000);
+
+// setTimeout(() => {
+//   container.insertBefore(myBox2, box2);
+// }, 4000);
+
+// const myBox1 = document.querySelector('#myBox1');
+// const myBox2 = document.querySelector('#myBox2');
+// const target = document.querySelector('#targetBox');
+
+// setTimeout(() => {
+//   targetBox.before(myBox1);
+// }, 3000);
+
+// setTimeout(() => {
+//   targetBox.after(myBox2);
+// }, 4000);
+
+// const container = document.querySelector('.container');
+// const newBox = `<div class="new-box box">.new-box要素</div>;`
+
+// setTimeout(() => {
+//   container.insertAdjacentHTML('afterbegin', newBox);
+// })
+
+// setTimeout(() => {
+//   const parentElement = document.querySelector('#parent');
+//   const childElement = document.querySelector('#child');
+
+//   parentElement.removeChild(childElement);
+// }, 3000);
+
+// const divElement = document.createElement('div');
+// const anchorElement = document.createElement('a');
+
+// const divElement = document.createElement('div');
+// divElement.innerHTML = 'これは動的に生成された要素です';
+// document.body.appendChild(divElement);
+
+document
+.querySelector('#create-modal-button')
+.addEventListener('click', displayModalWindow);
+
+function displayModalwindow() {
+  const modalElement = document.createElementElement('div');
+  modalElement.classList.add('modal');
+
+  const innerElement = document.createElement('div');
+  innerElement.classList.add('inner');
+  innerElement.innerHTML = `
+  <p>モーダルウィンドウの中身です</p>
+  <div class="character"></div>`;
+
+  modalElement.appendChild(innerElement);
+  document.body.appendChild(modalElement);
+
+  innerElement.addEventListener('click', () => {
+    closeModalWindow(modalElement);
+  });
+
+  function closeModalWindow(modalElement) {
+    document.body.removeChild(modalElement);
+  }
+}
