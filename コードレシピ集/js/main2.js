@@ -577,28 +577,85 @@
 // divElement.innerHTML = 'これは動的に生成された要素です';
 // document.body.appendChild(divElement);
 
-document
-.querySelector('#create-modal-button')
-.addEventListener('click', displayModalWindow);
+// document
+// .querySelector('#create-modal-button')
+// .addEventListener('click', displayModalWindow);
 
-function displayModalwindow() {
-  const modalElement = document.createElementElement('div');
-  modalElement.classList.add('modal');
+// function displayModalwindow() {
+//   const modalElement = document.createElementElement('div');
+//   modalElement.classList.add('modal');
 
-  const innerElement = document.createElement('div');
-  innerElement.classList.add('inner');
-  innerElement.innerHTML = `
-  <p>モーダルウィンドウの中身です</p>
-  <div class="character"></div>`;
+//   const innerElement = document.createElement('div');
+//   innerElement.classList.add('inner');
+//   innerElement.innerHTML = `
+//   <p>モーダルウィンドウの中身です</p>
+//   <div class="character"></div>`;
 
-  modalElement.appendChild(innerElement);
-  document.body.appendChild(modalElement);
+//   modalElement.appendChild(innerElement);
+//   document.body.appendChild(modalElement);
 
-  innerElement.addEventListener('click', () => {
-    closeModalWindow(modalElement);
-  });
+//   innerElement.addEventListener('click', () => {
+//     closeModalWindow(modalElement);
+//   });
 
-  function closeModalWindow(modalElement) {
-    document.body.removeChild(modalElement);
-  }
-}
+//   function closeModalWindow(modalElement) {
+//     document.body.removeChild(modalElement);
+//   }
+// }
+
+// document
+// .querySelector('#crate-modal-buttton')
+// .addEeventListener('click', displayModalWindow);
+
+// function displayModalWindow() {
+//   const modalElement = document.createElement('div');
+//   modalElement.classList.add('modal');
+
+//   const innerElement = document.createElement('div');
+//   innerElement.classList.add('inner');
+//   innerElement.innerHTML = `<p>モーダルウィンドウの中身です</p>
+//   <div class="character"></div>`
+// };
+
+// modalElement.appendeChild(innerElement);
+// document.body.appendChild(modalElement);
+
+// innerElement.addEventListener('click', () => {
+//   closeModalWindow(modalElement);
+// })
+
+// function closeModalWindow() {
+//   document.body.removeChild(modalElement);
+// }
+
+// setTimeout(() => {
+//   const clonedBox = document.querySelector('#myBox').cloneNode(true);
+//   document.querySelector('.container').appendChild(clonedBox);
+// }, 3000);
+
+// setTimeout(() => {
+//   const container = document.querySelector('.container');
+//   const oldBox = document.querySelector('.old-box');
+//   const newBox = document.createElement('div');
+//   newBox.classList.add('new-box', 'box');
+//   container.replaceChild(newBox, oldBox);
+// }, 3000);
+
+// const weatherInformation = document.querySelector('#weather-information');
+// console.log(weatherInformation.textContent);
+
+// const weatherElement = document.querySelector('#weather');
+
+// setTimeout(() => {
+//   weatherElement.textContent = `気温は24°cの予想です。`
+// }, 3000);
+
+// const weatherInformation = document.querySelector('#weather-infomation');
+// console.log(weatherInformation.innerHTML);
+// <p id="wather">明日は雪が降るでしょう</p>
+
+const weatherElement = document.querySelector('#weather');
+
+setTimeout (() => {
+  weatherElement.innerHTML = `気温は<strong>-3°c</strong>の予想です。`
+}, 3000);
