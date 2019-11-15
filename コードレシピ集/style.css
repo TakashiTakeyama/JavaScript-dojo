@@ -37,3 +37,21 @@ body.theme-dark {
 #weather strong {
   color: #d03939;
 }
+
+.button + .content {
+  display: none;
+  font-size: 20px;
+}
+
+.button + .content.show {
+  display: block;
+}
+
+#box {
+  width: 100px;
+  height: 100px;
+}
+
+.red {
+  background-color: #ff2bc2;
+}
