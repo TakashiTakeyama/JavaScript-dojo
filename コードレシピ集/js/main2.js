@@ -654,8 +654,94 @@
 // console.log(weatherInformation.innerHTML);
 // <p id="wather">明日は雪が降るでしょう</p>
 
-const weatherElement = document.querySelector('#weather');
+// const weatherElement = document.querySelector('#weather');
 
-setTimeout (() => {
-  weatherElement.innerHTML = `気温は<strong>-3°c</strong>の予想です。`
-}, 3000);
+// setTimeout (() => {
+//   weatherElement.innerHTML = `気温は<strong>-3°c</strong>の予想です。`
+// }, 3000);
+
+// const wetherInformation = document.querySelector('#weather-information');
+// console.log(wetherInformation.outerHTML);
+// weatherInfomation.outerHTML = '<img src="sample-image.png'>
+
+// const anchorElment = document.querySelector('#anchor');
+// console.log(anchorElement.getAttribute('href'));
+// const imageElement = document.querySelector('image');
+// imageElement.setAttribute('src', 'bar.png');
+
+// const aElementList = document.querySelectorAll('a');
+// aElementList.forEach((element) => {
+//   if (element.hasAttribute('target') === false) {
+//     return;
+//   }
+
+//   if (element.hasAttribute('target') !== '_blank') {
+//     return;
+//   }
+
+//   element.setAttribute('rel', 'noopener');
+// });
+
+// const box = document.querySelector('#box');
+// box.classList.add('bule');
+// box.classList.remove('red');
+// box.classList.add('blue', 'yellow', 'pink');
+// box.classList.remove('blue', 'yellow');
+
+// setInterval(() => {
+//   box.classList.toggle('red');
+// }, 1000); 
+
+// document.querySelectorAll('.button').forEach((button) => {
+//   button.addEventListener('click', () => {
+//     button.nextElementSibling.classList.toggle('show');
+//   });
+// });
+
+// const box = document.querySelectorAll('#box');
+// box.style.backgroundColor = 'blue';
+
+// const information = document.querySelector('#information');
+// information.style.color = 'white';
+// information.style.fontsize = '70px';
+// information.style.fontWeight = '600';
+// const strokeColor = '#52b84';
+// information.style.webkitTextStroke = `2px${strokeColor}`;
+// information.style.textStroke = `2px ${strokeColor}`;
+// information.style.textShadow = `7px 7px 0 #bf3384`;
+
+// const box = document.querySelector('#box');
+// console.log(getComputedStyle(box).width);
+// console.log(getComputedStyle(box).backgroundColor);
+
+// const element = document.querySelector('#myText');
+// const value = element.value;
+// console.log(value);
+
+// const element = document.querySelector('#myText');
+// element.addEventListener('input', handChange);
+
+// function handChange(evetn) {
+//   const value = event.target.value;
+//   document.querySelector('.log').innerHTML = value;
+// }
+
+// const element = document.querySelector('#myText');
+// const value = element.value;
+// console.log(value);
+
+// const element = document.querySelector('#myText');
+// element.addEventListener('input', handleChange);
+
+// function handleChange(event) {
+//   const value = event.target.value;
+//   const htmlStr = value.split('\n').join('<br />');
+//   document.querySelector('.log').innerHTML = htmlStr;
+// }
+
+const cbA = document.querySelector('#cbA');
+// const checkedA = cbA.checked = true;
+const value = event.target.checked;
+
+
+console.log('checkboxAの値', checkedA);
